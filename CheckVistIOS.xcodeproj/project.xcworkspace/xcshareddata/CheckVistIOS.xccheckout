@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>64A0581D-EF33-4458-B95D-CDED42061706</string>
+	<key>IDESourceControlProjectName</key>
+	<string>CheckVistIOS</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>B4565868-8D4E-489A-9549-C50556A4DD1F</key>
+		<string>https://github.com/Alamofire/Alamofire.git</string>
+		<key>EA502DAD-E7A2-43C5-9DB6-3B06FE5527E0</key>
+		<string>ssh://github.com/pareshs44/CheckVistIOS.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>CheckVistIOS.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>B4565868-8D4E-489A-9549-C50556A4DD1F</key>
+		<string>../../Alamofire</string>
+		<key>EA502DAD-E7A2-43C5-9DB6-3B06FE5527E0</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/pareshs44/CheckVistIOS.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>EA502DAD-E7A2-43C5-9DB6-3B06FE5527E0</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>B4565868-8D4E-489A-9549-C50556A4DD1F</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Alamofire</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>EA502DAD-E7A2-43C5-9DB6-3B06FE5527E0</string>
+			<key>IDESourceControlWCCName</key>
+			<string>CheckVistIOS</string>
+		</dict>
+	</array>
+</dict>
+</plist>

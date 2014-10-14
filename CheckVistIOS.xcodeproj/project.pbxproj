@@ -7,15 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A30A96C019EC8B7F00D27B3A /* CoreDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30A96BF19EC8B7F00D27B3A /* CoreDataStore.swift */; };
+		A30A96C319EC8E3E00D27B3A /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30A96C219EC8E3E00D27B3A /* CoreDataHelper.swift */; };
 		A3292DDE19D2C28000B1D4C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3292DDD19D2C28000B1D4C8 /* AppDelegate.swift */; };
 		A3292DE119D2C28000B1D4C8 /* CheckVistIOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A3292DDF19D2C28000B1D4C8 /* CheckVistIOS.xcdatamodeld */; };
-		A3292DE319D2C28000B1D4C8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3292DE219D2C28000B1D4C8 /* ViewController.swift */; };
 		A3292DE619D2C28000B1D4C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3292DE419D2C28000B1D4C8 /* Main.storyboard */; };
 		A3292DE819D2C28000B1D4C8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3292DE719D2C28000B1D4C8 /* Images.xcassets */; };
 		A3292DEB19D2C28000B1D4C8 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3292DE919D2C28000B1D4C8 /* LaunchScreen.xib */; };
 		A3292DF719D2C28000B1D4C8 /* CheckVistIOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3292DF619D2C28000B1D4C8 /* CheckVistIOSTests.swift */; };
 		A3292E7319D4052900B1D4C8 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3292E6E19D3FFE600B1D4C8 /* Alamofire.framework */; };
 		A3292E7519D4059300B1D4C8 /* Alamofire.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = A3292E6E19D3FFE600B1D4C8 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A347479F19EC3E2800DC7CB8 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = A347479E19EC3E2800DC7CB8 /* Task.swift */; };
+		A34747A119EC3E2900DC7CB8 /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34747A019EC3E2900DC7CB8 /* List.swift */; };
+		A3AE4B9119ED0F21008830B2 /* NFRCTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3AE4B9019ED0F21008830B2 /* NFRCTableViewController.swift */; };
+		A3D0E01919E8084C004A4BA1 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D0E01819E8084C004A4BA1 /* SignInViewController.swift */; };
+		A3D0E01B19E84371004A4BA1 /* SignInTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D0E01A19E84371004A4BA1 /* SignInTextField.swift */; };
+		A3D0E01D19E8E745004A4BA1 /* AlamofireManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D0E01C19E8E745004A4BA1 /* AlamofireManager.swift */; };
+		A3D0E01F19EB0D42004A4BA1 /* ChecklistsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D0E01E19EB0D42004A4BA1 /* ChecklistsViewController.swift */; };
+		A3D0E02119EB983D004A4BA1 /* TasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D0E02019EB983D004A4BA1 /* TasksViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,11 +73,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A30A96BF19EC8B7F00D27B3A /* CoreDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStore.swift; sourceTree = "<group>"; };
+		A30A96C219EC8E3E00D27B3A /* CoreDataHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
 		A3292DD819D2C28000B1D4C8 /* CheckVistIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CheckVistIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3292DDC19D2C28000B1D4C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A3292DDD19D2C28000B1D4C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A3292DE019D2C28000B1D4C8 /* CheckVistIOS.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CheckVistIOS.xcdatamodel; sourceTree = "<group>"; };
-		A3292DE219D2C28000B1D4C8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A3292DE519D2C28000B1D4C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A3292DE719D2C28000B1D4C8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A3292DEA19D2C28000B1D4C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -76,6 +86,14 @@
 		A3292DF519D2C28000B1D4C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A3292DF619D2C28000B1D4C8 /* CheckVistIOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckVistIOSTests.swift; sourceTree = "<group>"; };
 		A3292E6819D3FFE600B1D4C8 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
+		A347479E19EC3E2800DC7CB8 /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		A34747A019EC3E2900DC7CB8 /* List.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = List.swift; sourceTree = "<group>"; };
+		A3AE4B9019ED0F21008830B2 /* NFRCTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFRCTableViewController.swift; sourceTree = "<group>"; };
+		A3D0E01819E8084C004A4BA1 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		A3D0E01A19E84371004A4BA1 /* SignInTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInTextField.swift; sourceTree = "<group>"; };
+		A3D0E01C19E8E745004A4BA1 /* AlamofireManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireManager.swift; sourceTree = "<group>"; };
+		A3D0E01E19EB0D42004A4BA1 /* ChecklistsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChecklistsViewController.swift; sourceTree = "<group>"; };
+		A3D0E02019EB983D004A4BA1 /* TasksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TasksViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,14 +137,22 @@
 		A3292DDA19D2C28000B1D4C8 /* CheckVistIOS */ = {
 			isa = PBXGroup;
 			children = (
-				A3292E7619D419EB00B1D4C8 /* New Group */,
 				A3292DDD19D2C28000B1D4C8 /* AppDelegate.swift */,
-				A3292DE219D2C28000B1D4C8 /* ViewController.swift */,
+				A3D0E01C19E8E745004A4BA1 /* AlamofireManager.swift */,
+				A3D0E01819E8084C004A4BA1 /* SignInViewController.swift */,
+				A3D0E01A19E84371004A4BA1 /* SignInTextField.swift */,
+				A3D0E01E19EB0D42004A4BA1 /* ChecklistsViewController.swift */,
+				A3D0E02019EB983D004A4BA1 /* TasksViewController.swift */,
 				A3292DE419D2C28000B1D4C8 /* Main.storyboard */,
 				A3292DE719D2C28000B1D4C8 /* Images.xcassets */,
 				A3292DE919D2C28000B1D4C8 /* LaunchScreen.xib */,
 				A3292DDF19D2C28000B1D4C8 /* CheckVistIOS.xcdatamodeld */,
 				A3292DDB19D2C28000B1D4C8 /* Supporting Files */,
+				A30A96BF19EC8B7F00D27B3A /* CoreDataStore.swift */,
+				A30A96C219EC8E3E00D27B3A /* CoreDataHelper.swift */,
+				A34747A019EC3E2900DC7CB8 /* List.swift */,
+				A347479E19EC3E2800DC7CB8 /* Task.swift */,
+				A3AE4B9019ED0F21008830B2 /* NFRCTableViewController.swift */,
 			);
 			path = CheckVistIOS;
 			sourceTree = "<group>";
@@ -163,13 +189,6 @@
 				A3292E7019D3FFE600B1D4C8 /* AlamofireTests.xctest */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		A3292E7619D419EB00B1D4C8 /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -297,8 +316,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A3292DE319D2C28000B1D4C8 /* ViewController.swift in Sources */,
+				A3AE4B9119ED0F21008830B2 /* NFRCTableViewController.swift in Sources */,
+				A3D0E01919E8084C004A4BA1 /* SignInViewController.swift in Sources */,
+				A3D0E02119EB983D004A4BA1 /* TasksViewController.swift in Sources */,
+				A347479F19EC3E2800DC7CB8 /* Task.swift in Sources */,
 				A3292DE119D2C28000B1D4C8 /* CheckVistIOS.xcdatamodeld in Sources */,
+				A3D0E01F19EB0D42004A4BA1 /* ChecklistsViewController.swift in Sources */,
+				A30A96C019EC8B7F00D27B3A /* CoreDataStore.swift in Sources */,
+				A34747A119EC3E2900DC7CB8 /* List.swift in Sources */,
+				A30A96C319EC8E3E00D27B3A /* CoreDataHelper.swift in Sources */,
+				A3D0E01B19E84371004A4BA1 /* SignInTextField.swift in Sources */,
+				A3D0E01D19E8E745004A4BA1 /* AlamofireManager.swift in Sources */,
 				A3292DDE19D2C28000B1D4C8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
