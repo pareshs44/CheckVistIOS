@@ -17,9 +17,11 @@
 		A3292DF719D2C28000B1D4C8 /* CheckVistIOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3292DF619D2C28000B1D4C8 /* CheckVistIOSTests.swift */; };
 		A3292E7319D4052900B1D4C8 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3292E6E19D3FFE600B1D4C8 /* Alamofire.framework */; };
 		A3292E7519D4059300B1D4C8 /* Alamofire.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = A3292E6E19D3FFE600B1D4C8 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		A347479F19EC3E2800DC7CB8 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = A347479E19EC3E2800DC7CB8 /* Task.swift */; };
-		A34747A119EC3E2900DC7CB8 /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34747A019EC3E2900DC7CB8 /* List.swift */; };
 		A3AE4B9119ED0F21008830B2 /* NFRCTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3AE4B9019ED0F21008830B2 /* NFRCTableViewController.swift */; };
+		A3AE4B9319ED32BF008830B2 /* ListsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3AE4B9219ED32BF008830B2 /* ListsTableViewCell.swift */; };
+		A3AE4B9519ED64B5008830B2 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3AE4B9419ED64B5008830B2 /* CoreDataManager.swift */; };
+		A3AE4B9919EE4FEB008830B2 /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3AE4B9819EE4FEB008830B2 /* List.swift */; };
+		A3AE4B9B19EE4FEB008830B2 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3AE4B9A19EE4FEB008830B2 /* Task.swift */; };
 		A3D0E01919E8084C004A4BA1 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D0E01819E8084C004A4BA1 /* SignInViewController.swift */; };
 		A3D0E01B19E84371004A4BA1 /* SignInTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D0E01A19E84371004A4BA1 /* SignInTextField.swift */; };
 		A3D0E01D19E8E745004A4BA1 /* AlamofireManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D0E01C19E8E745004A4BA1 /* AlamofireManager.swift */; };
@@ -86,9 +88,11 @@
 		A3292DF519D2C28000B1D4C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A3292DF619D2C28000B1D4C8 /* CheckVistIOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckVistIOSTests.swift; sourceTree = "<group>"; };
 		A3292E6819D3FFE600B1D4C8 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
-		A347479E19EC3E2800DC7CB8 /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
-		A34747A019EC3E2900DC7CB8 /* List.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = List.swift; sourceTree = "<group>"; };
 		A3AE4B9019ED0F21008830B2 /* NFRCTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFRCTableViewController.swift; sourceTree = "<group>"; };
+		A3AE4B9219ED32BF008830B2 /* ListsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListsTableViewCell.swift; sourceTree = "<group>"; };
+		A3AE4B9419ED64B5008830B2 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		A3AE4B9819EE4FEB008830B2 /* List.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = List.swift; sourceTree = "<group>"; };
+		A3AE4B9A19EE4FEB008830B2 /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		A3D0E01819E8084C004A4BA1 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		A3D0E01A19E84371004A4BA1 /* SignInTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInTextField.swift; sourceTree = "<group>"; };
 		A3D0E01C19E8E745004A4BA1 /* AlamofireManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireManager.swift; sourceTree = "<group>"; };
@@ -139,20 +143,9 @@
 			children = (
 				A3292DDD19D2C28000B1D4C8 /* AppDelegate.swift */,
 				A3D0E01C19E8E745004A4BA1 /* AlamofireManager.swift */,
-				A3D0E01819E8084C004A4BA1 /* SignInViewController.swift */,
-				A3D0E01A19E84371004A4BA1 /* SignInTextField.swift */,
-				A3D0E01E19EB0D42004A4BA1 /* ChecklistsViewController.swift */,
-				A3D0E02019EB983D004A4BA1 /* TasksViewController.swift */,
-				A3292DE419D2C28000B1D4C8 /* Main.storyboard */,
-				A3292DE719D2C28000B1D4C8 /* Images.xcassets */,
-				A3292DE919D2C28000B1D4C8 /* LaunchScreen.xib */,
-				A3292DDF19D2C28000B1D4C8 /* CheckVistIOS.xcdatamodeld */,
+				A3AE4B9619ED7E9F008830B2 /* UI */,
+				A3AE4B9719ED7ECD008830B2 /* Model */,
 				A3292DDB19D2C28000B1D4C8 /* Supporting Files */,
-				A30A96BF19EC8B7F00D27B3A /* CoreDataStore.swift */,
-				A30A96C219EC8E3E00D27B3A /* CoreDataHelper.swift */,
-				A34747A019EC3E2900DC7CB8 /* List.swift */,
-				A347479E19EC3E2800DC7CB8 /* Task.swift */,
-				A3AE4B9019ED0F21008830B2 /* NFRCTableViewController.swift */,
 			);
 			path = CheckVistIOS;
 			sourceTree = "<group>";
@@ -160,6 +153,7 @@
 		A3292DDB19D2C28000B1D4C8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A3292DE719D2C28000B1D4C8 /* Images.xcassets */,
 				A3292DDC19D2C28000B1D4C8 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -189,6 +183,34 @@
 				A3292E7019D3FFE600B1D4C8 /* AlamofireTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		A3AE4B9619ED7E9F008830B2 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				A3292DE919D2C28000B1D4C8 /* LaunchScreen.xib */,
+				A3D0E01819E8084C004A4BA1 /* SignInViewController.swift */,
+				A3D0E01A19E84371004A4BA1 /* SignInTextField.swift */,
+				A3D0E01E19EB0D42004A4BA1 /* ChecklistsViewController.swift */,
+				A3D0E02019EB983D004A4BA1 /* TasksViewController.swift */,
+				A3292DE419D2C28000B1D4C8 /* Main.storyboard */,
+				A3AE4B9219ED32BF008830B2 /* ListsTableViewCell.swift */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		A3AE4B9719ED7ECD008830B2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A3AE4B9A19EE4FEB008830B2 /* Task.swift */,
+				A3AE4B9819EE4FEB008830B2 /* List.swift */,
+				A3292DDF19D2C28000B1D4C8 /* CheckVistIOS.xcdatamodeld */,
+				A30A96BF19EC8B7F00D27B3A /* CoreDataStore.swift */,
+				A30A96C219EC8E3E00D27B3A /* CoreDataHelper.swift */,
+				A3AE4B9019ED0F21008830B2 /* NFRCTableViewController.swift */,
+				A3AE4B9419ED64B5008830B2 /* CoreDataManager.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -319,15 +341,17 @@
 				A3AE4B9119ED0F21008830B2 /* NFRCTableViewController.swift in Sources */,
 				A3D0E01919E8084C004A4BA1 /* SignInViewController.swift in Sources */,
 				A3D0E02119EB983D004A4BA1 /* TasksViewController.swift in Sources */,
-				A347479F19EC3E2800DC7CB8 /* Task.swift in Sources */,
 				A3292DE119D2C28000B1D4C8 /* CheckVistIOS.xcdatamodeld in Sources */,
+				A3AE4B9919EE4FEB008830B2 /* List.swift in Sources */,
 				A3D0E01F19EB0D42004A4BA1 /* ChecklistsViewController.swift in Sources */,
 				A30A96C019EC8B7F00D27B3A /* CoreDataStore.swift in Sources */,
-				A34747A119EC3E2900DC7CB8 /* List.swift in Sources */,
 				A30A96C319EC8E3E00D27B3A /* CoreDataHelper.swift in Sources */,
 				A3D0E01B19E84371004A4BA1 /* SignInTextField.swift in Sources */,
 				A3D0E01D19E8E745004A4BA1 /* AlamofireManager.swift in Sources */,
 				A3292DDE19D2C28000B1D4C8 /* AppDelegate.swift in Sources */,
+				A3AE4B9519ED64B5008830B2 /* CoreDataManager.swift in Sources */,
+				A3AE4B9B19EE4FEB008830B2 /* Task.swift in Sources */,
+				A3AE4B9319ED32BF008830B2 /* ListsTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

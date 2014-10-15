@@ -11,13 +11,35 @@ import Alamofire
 import CoreData
 
 class AlamofireManager: NSObject {
-  let appContexts: AppManagedObjectContexts
+  let tokenExpiryInSeconds = 86400.0
   let baseURL = "http://checkvist.com/"
   let userDefaults = NSUserDefaults.standardUserDefaults()
   
-  init(appContexts:AppManagedObjectContexts) {
-    self.appContexts = appContexts
-    super.init()
+  func getToken(completion:(token:String) -> Void) {
+    let expiryDate = userDefaults.objectForKey("tokenExpiry") as NSDate
+    if expiryDate.timeIntervalSinceNow > 0 {
+      let token = userDefaults.stringForKey("token")!
+      completion(token: token)
+    } else {
+      refreshToken(completion)
+    }
+  }
+  
+  func refreshToken(completion:(token: String) -> Void) {
+    let refreshTokenPath = "auth/refresh_token.json"
+    let params = ["old_token": userDefaults.stringForKey("token")!]
+    let request = Alamofire.request(.GET, urlFor(refreshTokenPath), parameters: params)
+    request.responseJSON {
+      (_, _, response, error) in
+      if let refreshTokenError = error {
+        NSLog("Got error while refreshing token: %@", refreshTokenError)
+      }
+      if let token = response as? String {
+        self.userDefaults.setObject(token, forKey: "token")
+        self.userDefaults.setObject(NSDate(timeIntervalSinceNow: self.tokenExpiryInSeconds), forKey: "tokenExpiry")
+        completion(token: token)
+      }
+    }
   }
   
   func urlFor(path: String) -> URLStringConvertible {
@@ -33,78 +55,44 @@ class AlamofireManager: NSObject {
       if let signInError = error {
         NSLog("Got sign in error: %@", signInError)
       }
-      if let token: AnyObject = response {
+      if let token = response as? String {
         self.userDefaults.setObject(token, forKey: "token")
-        println(self.userDefaults.stringForKey("token"))
+        self.userDefaults.setObject(NSDate(timeIntervalSinceNow: self.tokenExpiryInSeconds), forKey: "tokenExpiry")
         completion()
       }
     }
   }
   
-  func getLists(completion:()-> Void) {
+  func getLists(completion:(response : AnyObject?)-> Void) {
     let checkListsPath = "checklists.json"
-    if let token = userDefaults.stringForKey("token") {
+    getToken() {
+      (token) in
       let params = ["token": token]
-      let request = Alamofire.request(.GET, urlFor(checkListsPath), parameters: params)
+      let request = Alamofire.request(.GET, self.urlFor(checkListsPath), parameters: params)
       request.responseJSON {
         (_, _, response, error) in
         if let listsError = error {
           NSLog("Got error while fetching lists: %@", listsError)
         }
-        let lists = response as? NSArray
-        if lists != nil {
-          for list in lists! {
-            println(list)
-            let bgContext = self.appContexts.backgroundContext
-            bgContext.performBlock() {
-              let listID = (list["id"] as NSNumber).stringValue
-              var listIem = List.listWith(ID: listID, managedObjectContext:bgContext) as List
-              listIem.name = list["name"]! as String
-              listIem.tasksCompleted = list["task_completed"]! as NSNumber
-              listIem.totalTasks = list["task_count"]! as NSNumber
-//              listIem.lastUpdated = list["updated_at"]! as String
-              println("CHICO")
-              bgContext.save(nil)
-            }
-          }
-        }
-        completion()
+        completion(response: response)
       }
     }
   }
   
-  func getTasksForList(id : String, completion:()-> Void) {
+  func getTasksForList(id : String, completion:(response : AnyObject?)-> Void) {
     let tasksPath = "checklists/"+id+"/tasks.json"
-    NSLog(tasksPath)
-    if let token = userDefaults.stringForKey("token") {
+    getToken() {
+      (token) in
       let params = ["token": token]
-      let request = Alamofire.request(.GET, urlFor(tasksPath), parameters: params)
+      let request = Alamofire.request(.GET, self.urlFor(tasksPath), parameters: params)
       request.responseJSON {
         (_, _, response, error) in
         if let listsError = error {
           NSLog("Got error while fetching tasks: %@", listsError)
         }
-        let tasks = response as? NSArray
-        if tasks != nil {
-          for task in tasks! {
-            println(task)
-            let bgContext = self.appContexts.backgroundContext
-            bgContext.performBlock() {
-              let taskID = (task["id"] as NSNumber).stringValue
-              let listID = (task["checklist_id"] as NSNumber).stringValue
-              var taskIem = Task.taskWith(ID: taskID, managedObjectContext:bgContext) as Task
-              taskIem.list = List.listWith(ID: listID, managedObjectContext: bgContext) as List
-//              listIem.name = list["name"]! as String
-//              listIem.tasksCompleted = list["task_completed"]! as NSNumber
-//              listIem.totalTasks = list["task_count"]! as NSNumber
-//              listIem.lastUpdated = list["updated_at"]! as NSDate
-              println("CHICO")
-              bgContext.save(nil)
-            }
-          }
-        }
-        completion()
+        completion(response: response)
       }
     }
   }
+  
 }

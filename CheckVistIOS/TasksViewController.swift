@@ -17,7 +17,8 @@ class TasksViewController : NFRCTableViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    refresh()
+    CoreDataManager(appContexts: appContexts).refreshTaksForListWith(listID)
+    self.title = "Tasks"
   }
   
   override func taskFetchRequest() -> NSFetchRequest {
@@ -31,15 +32,7 @@ class TasksViewController : NFRCTableViewController {
   override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCellWithIdentifier("taskCell")! as UITableViewCell
     let task = fetchedResultController.objectAtIndexPath(indexPath) as Task
-    cell.textLabel!.text = task.id
+    cell.textLabel!.text = task.name
     return cell
-  }
-  
-  func refresh() {
-    let manager = AlamofireManager(appContexts: appContexts!)
-    UIApplication.sharedApplication().networkActivityIndicatorVisible = true
-    manager.getTasksForList(listID) {
-      UIApplication.sharedApplication().networkActivityIndicatorVisible = false
-    }
   }
 }

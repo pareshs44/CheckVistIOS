@@ -22,11 +22,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
     // Override point for customization after application launch.
     let mainStoryBoard = UIStoryboard(name: "Main", bundle: nil)
-    let signInViewController = mainStoryBoard.instantiateViewControllerWithIdentifier("SignInViewController") as SignInViewController
-    signInViewController.appContexts = appContexts
     window = UIWindow(frame: UIScreen.mainScreen().bounds)
     window!.backgroundColor = UIColor.whiteColor()
-    window!.rootViewController = signInViewController
+    
+    var rootViewController:UIViewController
+    if let token = NSUserDefaults.standardUserDefaults().stringForKey("token") {
+      let navigationController :UINavigationController = mainStoryBoard.instantiateViewControllerWithIdentifier("MainNavigation") as UINavigationController
+      let listViewController = navigationController.viewControllers[0] as ChecklistsViewController
+      listViewController.appContexts = self.appContexts
+      rootViewController = navigationController
+    } else {
+      let signInViewController = mainStoryBoard.instantiateViewControllerWithIdentifier("SignInViewController") as SignInViewController
+      signInViewController.appContexts = appContexts
+      rootViewController = signInViewController
+    }
+    window!.rootViewController = rootViewController
     window!.makeKeyAndVisible()
     return true
   }

@@ -2,7 +2,7 @@
 //  List.swift
 //  CheckVistIOS
 //
-//  Created by Paresh Shukla on 10/13/14.
+//  Created by Paresh Shukla on 10/15/14.
 //  Copyright (c) 2014 Talk.to FZC. All rights reserved.
 //
 
@@ -13,10 +13,10 @@ import CoreData
 class List: NSManagedObject {
 
     @NSManaged var id: String
+    @NSManaged var lastUpdated: String
     @NSManaged var name: String
-    @NSManaged var totalTasks: NSNumber
     @NSManaged var tasksCompleted: NSNumber
-    @NSManaged var lastUpdated: NSDate
+    @NSManaged var totalTasks: NSNumber
     @NSManaged var tasks: NSSet
 
   class func listWith(#ID:String, managedObjectContext:NSManagedObjectContext) -> List {
@@ -39,5 +39,14 @@ class List: NSManagedObject {
       list.id = ID
     }
     return list
+  }
+  
+  class func insertOrUpdate(list:AnyObject, managedObjectContext:NSManagedObjectContext) {
+    let listID = (list["id"] as NSNumber).stringValue
+    var listIem = List.listWith(ID: listID, managedObjectContext:managedObjectContext) as List
+    listIem.name = list["name"]! as String
+    listIem.tasksCompleted = list["task_completed"]! as NSNumber
+    listIem.totalTasks = list["task_count"]! as NSNumber
+    listIem.lastUpdated = list["updated_at"]! as String
   }
 }

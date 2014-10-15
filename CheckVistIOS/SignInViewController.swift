@@ -18,7 +18,7 @@ class SignInViewController: UIViewController {
   @IBAction func signIn(sender: UIButton) {
     if let userEmailId = emailAddressTextField.text {
       if let password = passwordTextField.text {
-        let manager = AlamofireManager(appContexts:appContexts)
+        let manager = AlamofireManager()
         UIApplication.sharedApplication().networkActivityIndicatorVisible = true
         manager.signInWithEmailId(userEmailId, password: password) {
           UIApplication.sharedApplication().networkActivityIndicatorVisible = false
