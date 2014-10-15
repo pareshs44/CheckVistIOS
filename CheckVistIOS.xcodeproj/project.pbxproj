@@ -8,12 +8,25 @@
 
 /* Begin PBXBuildFile section */
 		A3292DDE19D2C28000B1D4C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3292DDD19D2C28000B1D4C8 /* AppDelegate.swift */; };
-		A3292DE119D2C28000B1D4C8 /* CheckVistIOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A3292DDF19D2C28000B1D4C8 /* CheckVistIOS.xcdatamodeld */; };
-		A3292DE319D2C28000B1D4C8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3292DE219D2C28000B1D4C8 /* ViewController.swift */; };
 		A3292DE619D2C28000B1D4C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3292DE419D2C28000B1D4C8 /* Main.storyboard */; };
 		A3292DE819D2C28000B1D4C8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3292DE719D2C28000B1D4C8 /* Images.xcassets */; };
 		A3292DEB19D2C28000B1D4C8 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3292DE919D2C28000B1D4C8 /* LaunchScreen.xib */; };
 		A3292DF719D2C28000B1D4C8 /* CheckVistIOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3292DF619D2C28000B1D4C8 /* CheckVistIOSTests.swift */; };
+		A3292E7319D4052900B1D4C8 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3292E6E19D3FFE600B1D4C8 /* Alamofire.framework */; };
+		A3292E7519D4059300B1D4C8 /* Alamofire.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = A3292E6E19D3FFE600B1D4C8 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A33EAB9919EE883300CB6B5C /* ChecklistsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33EAB9419EE883300CB6B5C /* ChecklistsViewController.swift */; };
+		A33EAB9A19EE883300CB6B5C /* ListsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33EAB9519EE883300CB6B5C /* ListsTableViewCell.swift */; };
+		A33EAB9B19EE883300CB6B5C /* SignInTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33EAB9619EE883300CB6B5C /* SignInTextField.swift */; };
+		A33EAB9C19EE883300CB6B5C /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33EAB9719EE883300CB6B5C /* SignInViewController.swift */; };
+		A33EAB9D19EE883300CB6B5C /* TasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33EAB9819EE883300CB6B5C /* TasksViewController.swift */; };
+		A33EABA619EE884400CB6B5C /* CheckVistIOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A33EAB9E19EE884400CB6B5C /* CheckVistIOS.xcdatamodeld */; };
+		A33EABA719EE884400CB6B5C /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33EABA019EE884400CB6B5C /* CoreDataHelper.swift */; };
+		A33EABA819EE884400CB6B5C /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33EABA119EE884400CB6B5C /* CoreDataManager.swift */; };
+		A33EABA919EE884400CB6B5C /* CoreDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33EABA219EE884400CB6B5C /* CoreDataStore.swift */; };
+		A33EABAA19EE884400CB6B5C /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33EABA319EE884400CB6B5C /* List.swift */; };
+		A33EABAB19EE884400CB6B5C /* NFRCTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33EABA419EE884400CB6B5C /* NFRCTableViewController.swift */; };
+		A33EABAC19EE884400CB6B5C /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33EABA519EE884400CB6B5C /* Task.swift */; };
+		A3D0E01D19E8E745004A4BA1 /* AlamofireManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D0E01C19E8E745004A4BA1 /* AlamofireManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,20 +37,67 @@
 			remoteGlobalIDString = A3292DD719D2C28000B1D4C8;
 			remoteInfo = CheckVistIOS;
 		};
+		A3292E6D19D3FFE600B1D4C8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A3292E6819D3FFE600B1D4C8 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F8111E3319A95C8B0040E7D1;
+			remoteInfo = Alamofire;
+		};
+		A3292E6F19D3FFE600B1D4C8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A3292E6819D3FFE600B1D4C8 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F8111E3E19A95C8B0040E7D1;
+			remoteInfo = AlamofireTests;
+		};
+		A3292E7119D4051100B1D4C8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A3292E6819D3FFE600B1D4C8 /* Alamofire.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = F8111E3219A95C8B0040E7D1;
+			remoteInfo = Alamofire;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A3292E7419D4054E00B1D4C8 /* Copy Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A3292E7519D4059300B1D4C8 /* Alamofire.framework in Copy Frameworks */,
+			);
+			name = "Copy Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		A3292DD819D2C28000B1D4C8 /* CheckVistIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CheckVistIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3292DDC19D2C28000B1D4C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A3292DDD19D2C28000B1D4C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A3292DE019D2C28000B1D4C8 /* CheckVistIOS.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CheckVistIOS.xcdatamodel; sourceTree = "<group>"; };
-		A3292DE219D2C28000B1D4C8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A3292DE519D2C28000B1D4C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A3292DE719D2C28000B1D4C8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A3292DEA19D2C28000B1D4C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		A3292DF019D2C28000B1D4C8 /* CheckVistIOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CheckVistIOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3292DF519D2C28000B1D4C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A3292DF619D2C28000B1D4C8 /* CheckVistIOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckVistIOSTests.swift; sourceTree = "<group>"; };
+		A3292E6819D3FFE600B1D4C8 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
+		A33EAB9419EE883300CB6B5C /* ChecklistsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChecklistsViewController.swift; path = UI/ChecklistsViewController.swift; sourceTree = "<group>"; };
+		A33EAB9519EE883300CB6B5C /* ListsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ListsTableViewCell.swift; path = UI/ListsTableViewCell.swift; sourceTree = "<group>"; };
+		A33EAB9619EE883300CB6B5C /* SignInTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignInTextField.swift; path = UI/SignInTextField.swift; sourceTree = "<group>"; };
+		A33EAB9719EE883300CB6B5C /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignInViewController.swift; path = UI/SignInViewController.swift; sourceTree = "<group>"; };
+		A33EAB9819EE883300CB6B5C /* TasksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TasksViewController.swift; path = UI/TasksViewController.swift; sourceTree = "<group>"; };
+		A33EAB9F19EE884400CB6B5C /* CheckVistIOS.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CheckVistIOS.xcdatamodel; sourceTree = "<group>"; };
+		A33EABA019EE884400CB6B5C /* CoreDataHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoreDataHelper.swift; path = Model/CoreDataHelper.swift; sourceTree = "<group>"; };
+		A33EABA119EE884400CB6B5C /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoreDataManager.swift; path = Model/CoreDataManager.swift; sourceTree = "<group>"; };
+		A33EABA219EE884400CB6B5C /* CoreDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoreDataStore.swift; path = Model/CoreDataStore.swift; sourceTree = "<group>"; };
+		A33EABA319EE884400CB6B5C /* List.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = List.swift; path = Model/List.swift; sourceTree = "<group>"; };
+		A33EABA419EE884400CB6B5C /* NFRCTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NFRCTableViewController.swift; path = Model/NFRCTableViewController.swift; sourceTree = "<group>"; };
+		A33EABA519EE884400CB6B5C /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Task.swift; path = Model/Task.swift; sourceTree = "<group>"; };
+		A3D0E01C19E8E745004A4BA1 /* AlamofireManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +105,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3292E7319D4052900B1D4C8 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,6 +125,7 @@
 				A3292DDA19D2C28000B1D4C8 /* CheckVistIOS */,
 				A3292DF319D2C28000B1D4C8 /* CheckVistIOSTests */,
 				A3292DD919D2C28000B1D4C8 /* Products */,
+				A3292E6819D3FFE600B1D4C8 /* Alamofire.xcodeproj */,
 			);
 			sourceTree = "<group>";
 		};
@@ -80,11 +142,9 @@
 			isa = PBXGroup;
 			children = (
 				A3292DDD19D2C28000B1D4C8 /* AppDelegate.swift */,
-				A3292DE219D2C28000B1D4C8 /* ViewController.swift */,
-				A3292DE419D2C28000B1D4C8 /* Main.storyboard */,
-				A3292DE719D2C28000B1D4C8 /* Images.xcassets */,
-				A3292DE919D2C28000B1D4C8 /* LaunchScreen.xib */,
-				A3292DDF19D2C28000B1D4C8 /* CheckVistIOS.xcdatamodeld */,
+				A3D0E01C19E8E745004A4BA1 /* AlamofireManager.swift */,
+				A3AE4B9619ED7E9F008830B2 /* UI */,
+				A3AE4B9719ED7ECD008830B2 /* Model */,
 				A3292DDB19D2C28000B1D4C8 /* Supporting Files */,
 			);
 			path = CheckVistIOS;
@@ -93,6 +153,7 @@
 		A3292DDB19D2C28000B1D4C8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A3292DE719D2C28000B1D4C8 /* Images.xcassets */,
 				A3292DDC19D2C28000B1D4C8 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -115,6 +176,43 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		A3292E6919D3FFE600B1D4C8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A3292E6E19D3FFE600B1D4C8 /* Alamofire.framework */,
+				A3292E7019D3FFE600B1D4C8 /* AlamofireTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A3AE4B9619ED7E9F008830B2 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				A33EAB9419EE883300CB6B5C /* ChecklistsViewController.swift */,
+				A33EAB9519EE883300CB6B5C /* ListsTableViewCell.swift */,
+				A33EAB9619EE883300CB6B5C /* SignInTextField.swift */,
+				A33EAB9719EE883300CB6B5C /* SignInViewController.swift */,
+				A33EAB9819EE883300CB6B5C /* TasksViewController.swift */,
+				A3292DE919D2C28000B1D4C8 /* LaunchScreen.xib */,
+				A3292DE419D2C28000B1D4C8 /* Main.storyboard */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		A3AE4B9719ED7ECD008830B2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A33EAB9E19EE884400CB6B5C /* CheckVistIOS.xcdatamodeld */,
+				A33EABA019EE884400CB6B5C /* CoreDataHelper.swift */,
+				A33EABA119EE884400CB6B5C /* CoreDataManager.swift */,
+				A33EABA219EE884400CB6B5C /* CoreDataStore.swift */,
+				A33EABA319EE884400CB6B5C /* List.swift */,
+				A33EABA419EE884400CB6B5C /* NFRCTableViewController.swift */,
+				A33EABA519EE884400CB6B5C /* Task.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -125,10 +223,12 @@
 				A3292DD419D2C28000B1D4C8 /* Sources */,
 				A3292DD519D2C28000B1D4C8 /* Frameworks */,
 				A3292DD619D2C28000B1D4C8 /* Resources */,
+				A3292E7419D4054E00B1D4C8 /* Copy Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				A3292E7219D4051100B1D4C8 /* PBXTargetDependency */,
 			);
 			name = CheckVistIOS;
 			productName = CheckVistIOS;
@@ -182,6 +282,12 @@
 			mainGroup = A3292DCF19D2C28000B1D4C8;
 			productRefGroup = A3292DD919D2C28000B1D4C8 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = A3292E6919D3FFE600B1D4C8 /* Products */;
+					ProjectRef = A3292E6819D3FFE600B1D4C8 /* Alamofire.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				A3292DD719D2C28000B1D4C8 /* CheckVistIOS */,
@@ -189,6 +295,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		A3292E6E19D3FFE600B1D4C8 /* Alamofire.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Alamofire.framework;
+			remoteRef = A3292E6D19D3FFE600B1D4C8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A3292E7019D3FFE600B1D4C8 /* AlamofireTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = AlamofireTests.xctest;
+			remoteRef = A3292E6F19D3FFE600B1D4C8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		A3292DD619D2C28000B1D4C8 /* Resources */ = {
@@ -215,8 +338,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A3292DE319D2C28000B1D4C8 /* ViewController.swift in Sources */,
-				A3292DE119D2C28000B1D4C8 /* CheckVistIOS.xcdatamodeld in Sources */,
+				A33EABAB19EE884400CB6B5C /* NFRCTableViewController.swift in Sources */,
+				A33EABA619EE884400CB6B5C /* CheckVistIOS.xcdatamodeld in Sources */,
+				A3D0E01D19E8E745004A4BA1 /* AlamofireManager.swift in Sources */,
+				A33EAB9A19EE883300CB6B5C /* ListsTableViewCell.swift in Sources */,
+				A33EABA919EE884400CB6B5C /* CoreDataStore.swift in Sources */,
+				A33EAB9C19EE883300CB6B5C /* SignInViewController.swift in Sources */,
+				A33EABAA19EE884400CB6B5C /* List.swift in Sources */,
+				A33EAB9D19EE883300CB6B5C /* TasksViewController.swift in Sources */,
+				A33EAB9919EE883300CB6B5C /* ChecklistsViewController.swift in Sources */,
+				A33EABA719EE884400CB6B5C /* CoreDataHelper.swift in Sources */,
+				A33EAB9B19EE883300CB6B5C /* SignInTextField.swift in Sources */,
+				A33EABA819EE884400CB6B5C /* CoreDataManager.swift in Sources */,
+				A33EABAC19EE884400CB6B5C /* Task.swift in Sources */,
 				A3292DDE19D2C28000B1D4C8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -236,6 +370,11 @@
 			isa = PBXTargetDependency;
 			target = A3292DD719D2C28000B1D4C8 /* CheckVistIOS */;
 			targetProxy = A3292DF119D2C28000B1D4C8 /* PBXContainerItemProxy */;
+		};
+		A3292E7219D4051100B1D4C8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Alamofire;
+			targetProxy = A3292E7119D4051100B1D4C8 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -411,6 +550,7 @@
 				A3292DFC19D2C28000B1D4C8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A3292DFD19D2C28000B1D4C8 /* Build configuration list for PBXNativeTarget "CheckVistIOSTests" */ = {
 			isa = XCConfigurationList;
@@ -419,17 +559,19 @@
 				A3292DFF19D2C28000B1D4C8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		A3292DDF19D2C28000B1D4C8 /* CheckVistIOS.xcdatamodeld */ = {
+		A33EAB9E19EE884400CB6B5C /* CheckVistIOS.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				A3292DE019D2C28000B1D4C8 /* CheckVistIOS.xcdatamodel */,
+				A33EAB9F19EE884400CB6B5C /* CheckVistIOS.xcdatamodel */,
 			);
-			currentVersion = A3292DE019D2C28000B1D4C8 /* CheckVistIOS.xcdatamodel */;
-			path = CheckVistIOS.xcdatamodeld;
+			currentVersion = A33EAB9F19EE884400CB6B5C /* CheckVistIOS.xcdatamodel */;
+			name = CheckVistIOS.xcdatamodeld;
+			path = Model/CheckVistIOS.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
