@@ -7,26 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A30A96C019EC8B7F00D27B3A /* CoreDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30A96BF19EC8B7F00D27B3A /* CoreDataStore.swift */; };
-		A30A96C319EC8E3E00D27B3A /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30A96C219EC8E3E00D27B3A /* CoreDataHelper.swift */; };
 		A3292DDE19D2C28000B1D4C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3292DDD19D2C28000B1D4C8 /* AppDelegate.swift */; };
-		A3292DE119D2C28000B1D4C8 /* CheckVistIOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A3292DDF19D2C28000B1D4C8 /* CheckVistIOS.xcdatamodeld */; };
 		A3292DE619D2C28000B1D4C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3292DE419D2C28000B1D4C8 /* Main.storyboard */; };
 		A3292DE819D2C28000B1D4C8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3292DE719D2C28000B1D4C8 /* Images.xcassets */; };
 		A3292DEB19D2C28000B1D4C8 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3292DE919D2C28000B1D4C8 /* LaunchScreen.xib */; };
 		A3292DF719D2C28000B1D4C8 /* CheckVistIOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3292DF619D2C28000B1D4C8 /* CheckVistIOSTests.swift */; };
 		A3292E7319D4052900B1D4C8 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3292E6E19D3FFE600B1D4C8 /* Alamofire.framework */; };
 		A3292E7519D4059300B1D4C8 /* Alamofire.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = A3292E6E19D3FFE600B1D4C8 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		A3AE4B9119ED0F21008830B2 /* NFRCTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3AE4B9019ED0F21008830B2 /* NFRCTableViewController.swift */; };
-		A3AE4B9319ED32BF008830B2 /* ListsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3AE4B9219ED32BF008830B2 /* ListsTableViewCell.swift */; };
-		A3AE4B9519ED64B5008830B2 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3AE4B9419ED64B5008830B2 /* CoreDataManager.swift */; };
-		A3AE4B9919EE4FEB008830B2 /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3AE4B9819EE4FEB008830B2 /* List.swift */; };
-		A3AE4B9B19EE4FEB008830B2 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3AE4B9A19EE4FEB008830B2 /* Task.swift */; };
-		A3D0E01919E8084C004A4BA1 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D0E01819E8084C004A4BA1 /* SignInViewController.swift */; };
-		A3D0E01B19E84371004A4BA1 /* SignInTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D0E01A19E84371004A4BA1 /* SignInTextField.swift */; };
+		A33EAB9919EE883300CB6B5C /* ChecklistsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33EAB9419EE883300CB6B5C /* ChecklistsViewController.swift */; };
+		A33EAB9A19EE883300CB6B5C /* ListsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33EAB9519EE883300CB6B5C /* ListsTableViewCell.swift */; };
+		A33EAB9B19EE883300CB6B5C /* SignInTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33EAB9619EE883300CB6B5C /* SignInTextField.swift */; };
+		A33EAB9C19EE883300CB6B5C /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33EAB9719EE883300CB6B5C /* SignInViewController.swift */; };
+		A33EAB9D19EE883300CB6B5C /* TasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33EAB9819EE883300CB6B5C /* TasksViewController.swift */; };
+		A33EABA619EE884400CB6B5C /* CheckVistIOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A33EAB9E19EE884400CB6B5C /* CheckVistIOS.xcdatamodeld */; };
+		A33EABA719EE884400CB6B5C /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33EABA019EE884400CB6B5C /* CoreDataHelper.swift */; };
+		A33EABA819EE884400CB6B5C /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33EABA119EE884400CB6B5C /* CoreDataManager.swift */; };
+		A33EABA919EE884400CB6B5C /* CoreDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33EABA219EE884400CB6B5C /* CoreDataStore.swift */; };
+		A33EABAA19EE884400CB6B5C /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33EABA319EE884400CB6B5C /* List.swift */; };
+		A33EABAB19EE884400CB6B5C /* NFRCTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33EABA419EE884400CB6B5C /* NFRCTableViewController.swift */; };
+		A33EABAC19EE884400CB6B5C /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33EABA519EE884400CB6B5C /* Task.swift */; };
 		A3D0E01D19E8E745004A4BA1 /* AlamofireManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D0E01C19E8E745004A4BA1 /* AlamofireManager.swift */; };
-		A3D0E01F19EB0D42004A4BA1 /* ChecklistsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D0E01E19EB0D42004A4BA1 /* ChecklistsViewController.swift */; };
-		A3D0E02119EB983D004A4BA1 /* TasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D0E02019EB983D004A4BA1 /* TasksViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,12 +75,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		A30A96BF19EC8B7F00D27B3A /* CoreDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStore.swift; sourceTree = "<group>"; };
-		A30A96C219EC8E3E00D27B3A /* CoreDataHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
 		A3292DD819D2C28000B1D4C8 /* CheckVistIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CheckVistIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3292DDC19D2C28000B1D4C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A3292DDD19D2C28000B1D4C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A3292DE019D2C28000B1D4C8 /* CheckVistIOS.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CheckVistIOS.xcdatamodel; sourceTree = "<group>"; };
 		A3292DE519D2C28000B1D4C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A3292DE719D2C28000B1D4C8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A3292DEA19D2C28000B1D4C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -88,16 +85,19 @@
 		A3292DF519D2C28000B1D4C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A3292DF619D2C28000B1D4C8 /* CheckVistIOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckVistIOSTests.swift; sourceTree = "<group>"; };
 		A3292E6819D3FFE600B1D4C8 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
-		A3AE4B9019ED0F21008830B2 /* NFRCTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFRCTableViewController.swift; sourceTree = "<group>"; };
-		A3AE4B9219ED32BF008830B2 /* ListsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListsTableViewCell.swift; sourceTree = "<group>"; };
-		A3AE4B9419ED64B5008830B2 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
-		A3AE4B9819EE4FEB008830B2 /* List.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = List.swift; sourceTree = "<group>"; };
-		A3AE4B9A19EE4FEB008830B2 /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
-		A3D0E01819E8084C004A4BA1 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
-		A3D0E01A19E84371004A4BA1 /* SignInTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInTextField.swift; sourceTree = "<group>"; };
+		A33EAB9419EE883300CB6B5C /* ChecklistsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChecklistsViewController.swift; path = UI/ChecklistsViewController.swift; sourceTree = "<group>"; };
+		A33EAB9519EE883300CB6B5C /* ListsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ListsTableViewCell.swift; path = UI/ListsTableViewCell.swift; sourceTree = "<group>"; };
+		A33EAB9619EE883300CB6B5C /* SignInTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignInTextField.swift; path = UI/SignInTextField.swift; sourceTree = "<group>"; };
+		A33EAB9719EE883300CB6B5C /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignInViewController.swift; path = UI/SignInViewController.swift; sourceTree = "<group>"; };
+		A33EAB9819EE883300CB6B5C /* TasksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TasksViewController.swift; path = UI/TasksViewController.swift; sourceTree = "<group>"; };
+		A33EAB9F19EE884400CB6B5C /* CheckVistIOS.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CheckVistIOS.xcdatamodel; sourceTree = "<group>"; };
+		A33EABA019EE884400CB6B5C /* CoreDataHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoreDataHelper.swift; path = Model/CoreDataHelper.swift; sourceTree = "<group>"; };
+		A33EABA119EE884400CB6B5C /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoreDataManager.swift; path = Model/CoreDataManager.swift; sourceTree = "<group>"; };
+		A33EABA219EE884400CB6B5C /* CoreDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoreDataStore.swift; path = Model/CoreDataStore.swift; sourceTree = "<group>"; };
+		A33EABA319EE884400CB6B5C /* List.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = List.swift; path = Model/List.swift; sourceTree = "<group>"; };
+		A33EABA419EE884400CB6B5C /* NFRCTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NFRCTableViewController.swift; path = Model/NFRCTableViewController.swift; sourceTree = "<group>"; };
+		A33EABA519EE884400CB6B5C /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Task.swift; path = Model/Task.swift; sourceTree = "<group>"; };
 		A3D0E01C19E8E745004A4BA1 /* AlamofireManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireManager.swift; sourceTree = "<group>"; };
-		A3D0E01E19EB0D42004A4BA1 /* ChecklistsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChecklistsViewController.swift; sourceTree = "<group>"; };
-		A3D0E02019EB983D004A4BA1 /* TasksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TasksViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,13 +188,13 @@
 		A3AE4B9619ED7E9F008830B2 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				A33EAB9419EE883300CB6B5C /* ChecklistsViewController.swift */,
+				A33EAB9519EE883300CB6B5C /* ListsTableViewCell.swift */,
+				A33EAB9619EE883300CB6B5C /* SignInTextField.swift */,
+				A33EAB9719EE883300CB6B5C /* SignInViewController.swift */,
+				A33EAB9819EE883300CB6B5C /* TasksViewController.swift */,
 				A3292DE919D2C28000B1D4C8 /* LaunchScreen.xib */,
-				A3D0E01819E8084C004A4BA1 /* SignInViewController.swift */,
-				A3D0E01A19E84371004A4BA1 /* SignInTextField.swift */,
-				A3D0E01E19EB0D42004A4BA1 /* ChecklistsViewController.swift */,
-				A3D0E02019EB983D004A4BA1 /* TasksViewController.swift */,
 				A3292DE419D2C28000B1D4C8 /* Main.storyboard */,
-				A3AE4B9219ED32BF008830B2 /* ListsTableViewCell.swift */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -202,13 +202,13 @@
 		A3AE4B9719ED7ECD008830B2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				A3AE4B9A19EE4FEB008830B2 /* Task.swift */,
-				A3AE4B9819EE4FEB008830B2 /* List.swift */,
-				A3292DDF19D2C28000B1D4C8 /* CheckVistIOS.xcdatamodeld */,
-				A30A96BF19EC8B7F00D27B3A /* CoreDataStore.swift */,
-				A30A96C219EC8E3E00D27B3A /* CoreDataHelper.swift */,
-				A3AE4B9019ED0F21008830B2 /* NFRCTableViewController.swift */,
-				A3AE4B9419ED64B5008830B2 /* CoreDataManager.swift */,
+				A33EAB9E19EE884400CB6B5C /* CheckVistIOS.xcdatamodeld */,
+				A33EABA019EE884400CB6B5C /* CoreDataHelper.swift */,
+				A33EABA119EE884400CB6B5C /* CoreDataManager.swift */,
+				A33EABA219EE884400CB6B5C /* CoreDataStore.swift */,
+				A33EABA319EE884400CB6B5C /* List.swift */,
+				A33EABA419EE884400CB6B5C /* NFRCTableViewController.swift */,
+				A33EABA519EE884400CB6B5C /* Task.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -338,20 +338,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A3AE4B9119ED0F21008830B2 /* NFRCTableViewController.swift in Sources */,
-				A3D0E01919E8084C004A4BA1 /* SignInViewController.swift in Sources */,
-				A3D0E02119EB983D004A4BA1 /* TasksViewController.swift in Sources */,
-				A3292DE119D2C28000B1D4C8 /* CheckVistIOS.xcdatamodeld in Sources */,
-				A3AE4B9919EE4FEB008830B2 /* List.swift in Sources */,
-				A3D0E01F19EB0D42004A4BA1 /* ChecklistsViewController.swift in Sources */,
-				A30A96C019EC8B7F00D27B3A /* CoreDataStore.swift in Sources */,
-				A30A96C319EC8E3E00D27B3A /* CoreDataHelper.swift in Sources */,
-				A3D0E01B19E84371004A4BA1 /* SignInTextField.swift in Sources */,
+				A33EABAB19EE884400CB6B5C /* NFRCTableViewController.swift in Sources */,
+				A33EABA619EE884400CB6B5C /* CheckVistIOS.xcdatamodeld in Sources */,
 				A3D0E01D19E8E745004A4BA1 /* AlamofireManager.swift in Sources */,
+				A33EAB9A19EE883300CB6B5C /* ListsTableViewCell.swift in Sources */,
+				A33EABA919EE884400CB6B5C /* CoreDataStore.swift in Sources */,
+				A33EAB9C19EE883300CB6B5C /* SignInViewController.swift in Sources */,
+				A33EABAA19EE884400CB6B5C /* List.swift in Sources */,
+				A33EAB9D19EE883300CB6B5C /* TasksViewController.swift in Sources */,
+				A33EAB9919EE883300CB6B5C /* ChecklistsViewController.swift in Sources */,
+				A33EABA719EE884400CB6B5C /* CoreDataHelper.swift in Sources */,
+				A33EAB9B19EE883300CB6B5C /* SignInTextField.swift in Sources */,
+				A33EABA819EE884400CB6B5C /* CoreDataManager.swift in Sources */,
+				A33EABAC19EE884400CB6B5C /* Task.swift in Sources */,
 				A3292DDE19D2C28000B1D4C8 /* AppDelegate.swift in Sources */,
-				A3AE4B9519ED64B5008830B2 /* CoreDataManager.swift in Sources */,
-				A3AE4B9B19EE4FEB008830B2 /* Task.swift in Sources */,
-				A3AE4B9319ED32BF008830B2 /* ListsTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -564,13 +564,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		A3292DDF19D2C28000B1D4C8 /* CheckVistIOS.xcdatamodeld */ = {
+		A33EAB9E19EE884400CB6B5C /* CheckVistIOS.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				A3292DE019D2C28000B1D4C8 /* CheckVistIOS.xcdatamodel */,
+				A33EAB9F19EE884400CB6B5C /* CheckVistIOS.xcdatamodel */,
 			);
-			currentVersion = A3292DE019D2C28000B1D4C8 /* CheckVistIOS.xcdatamodel */;
-			path = CheckVistIOS.xcdatamodeld;
+			currentVersion = A33EAB9F19EE884400CB6B5C /* CheckVistIOS.xcdatamodel */;
+			name = CheckVistIOS.xcdatamodeld;
+			path = Model/CheckVistIOS.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
