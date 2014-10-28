@@ -15,7 +15,7 @@ class ChecklistsViewController: UITableViewController, NSFetchedResultsControlle
   var tokenManager: APITokenManager!
   
   lazy var fetchedResultsController: NSFetchedResultsController = {
-    let fetchRequest = NSFetchRequest(entityName: "List")
+    let fetchRequest = NSFetchRequest(entityName: NSStringFromClass(List))
     let sortDescriptor = NSSortDescriptor(key: "lastUpdated", ascending: false)
     fetchRequest.sortDescriptors = [sortDescriptor]
     
@@ -82,18 +82,6 @@ class ChecklistsViewController: UITableViewController, NSFetchedResultsControlle
     }
     cell.textLabel.text = list.name
     cell.detailTextLabel?.text = detailsText
-    
-//    var viewRect = CGRect(x: 0, y: 0, width: CGRectGetWidth(cell.frame), height: CGRectGetHeight(cell.frame))
-//    var view = UIView(frame: viewRect)
-//    
-//    println("Pikahuc: %@", cell.contentView.subviews)
-//    cell.backgroundColor = UIColor.clearColor()
-//    var progress = CGFloat(list.tasksCompleted.floatValue / list.totalTasks.floatValue)
-//    var barWidth = progress * cell.frame.size.width as NSNumber
-//    var rect = CGRect(x: 0, y: 0, width: cell.frame.size.width, height: cell.frame.size.height)
-//    var view = UIView(frame: rect)
-//    view.backgroundColor = UIColor.blueColor()
-//    cell.contentView.addSubview(view)
   }
   
   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

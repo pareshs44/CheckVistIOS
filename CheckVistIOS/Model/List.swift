@@ -30,11 +30,11 @@ class List: NSManagedObject {
       if results.count > 0 {
         list = results.last as List
       } else {
-        list = NSEntityDescription.insertNewObjectForEntityForName("List", inManagedObjectContext: managedObjectContext) as List
+        list = NSEntityDescription.insertNewObjectForEntityForName(NSStringFromClass(self), inManagedObjectContext: managedObjectContext) as List
         list.id = ID
       }
     } else {
-      list = NSEntityDescription.insertNewObjectForEntityForName("List", inManagedObjectContext: managedObjectContext) as List
+      list = NSEntityDescription.insertNewObjectForEntityForName(NSStringFromClass(self), inManagedObjectContext: managedObjectContext) as List
       list.id = ID
     }
     return list

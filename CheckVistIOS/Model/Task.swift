@@ -34,19 +34,17 @@ class Task: NSManagedObject {
       if results.count > 0 {
         task = results.last as Task
       } else {
-        task = NSEntityDescription.insertNewObjectForEntityForName("Task", inManagedObjectContext: managedObjectContext) as Task
+        task = NSEntityDescription.insertNewObjectForEntityForName(NSStringFromClass(self), inManagedObjectContext: managedObjectContext) as Task
         task.id = ID
       }
     } else {
-      task = NSEntityDescription.insertNewObjectForEntityForName("List", inManagedObjectContext: managedObjectContext) as Task
+      task = NSEntityDescription.insertNewObjectForEntityForName(NSStringFromClass(self), inManagedObjectContext: managedObjectContext) as Task
       task.id = ID
     }
     return task
   }
   
   class func insertOrUpdate(task: NSDictionary, managedObjectContext: NSManagedObjectContext) {
-    println("PIKACHU: %@", task)
-
     let taskID = (task["id"] as NSNumber).stringValue
     let listID = (task["checklist_id"] as NSNumber).stringValue
     var taskItem = Task.taskWith(ID: taskID, managedObjectContext:managedObjectContext) as Task

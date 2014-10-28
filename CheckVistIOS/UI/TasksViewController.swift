@@ -162,5 +162,4 @@ class TasksViewController : UITableViewController, NSFetchedResultsControllerDel
       coreDataManager.closeTaskItemWith(listID: listID, taskID: task.id)
     }
   }
-  
 }

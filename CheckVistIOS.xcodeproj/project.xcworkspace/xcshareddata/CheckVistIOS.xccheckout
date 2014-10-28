@@ -10,43 +10,43 @@
 	<string>CheckVistIOS</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>B4565868-8D4E-489A-9549-C50556A4DD1F</key>
+		<key>67620B5EFA902936DF04070AF595B76AB0333747</key>
 		<string>https://github.com/Alamofire/Alamofire.git</string>
-		<key>EA502DAD-E7A2-43C5-9DB6-3B06FE5527E0</key>
-		<string>ssh://github.com/pareshs44/CheckVistIOS.git</string>
+		<key>AAAE05F8E4C7A91EFB30B68A647AB95AE583B1C5</key>
+		<string>github.com:pareshs44/CheckVistIOS.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>CheckVistIOS.xcodeproj/project.xcworkspace</string>
+	<string>CheckVistIOS.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>B4565868-8D4E-489A-9549-C50556A4DD1F</key>
-		<string>../../Alamofire</string>
-		<key>EA502DAD-E7A2-43C5-9DB6-3B06FE5527E0</key>
+		<key>67620B5EFA902936DF04070AF595B76AB0333747</key>
+		<string>../..Alamofire</string>
+		<key>AAAE05F8E4C7A91EFB30B68A647AB95AE583B1C5</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>ssh://github.com/pareshs44/CheckVistIOS.git</string>
+	<string>github.com:pareshs44/CheckVistIOS.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>EA502DAD-E7A2-43C5-9DB6-3B06FE5527E0</string>
+	<string>AAAE05F8E4C7A91EFB30B68A647AB95AE583B1C5</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>B4565868-8D4E-489A-9549-C50556A4DD1F</string>
+			<string>AAAE05F8E4C7A91EFB30B68A647AB95AE583B1C5</string>
 			<key>IDESourceControlWCCName</key>
-			<string>Alamofire</string>
+			<string>CheckVistIOS</string>
 		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>EA502DAD-E7A2-43C5-9DB6-3B06FE5527E0</string>
+			<string>67620B5EFA902936DF04070AF595B76AB0333747</string>
 			<key>IDESourceControlWCCName</key>
-			<string>CheckVistIOS</string>
+			<string>CheckVistIOSAlamofire</string>
 		</dict>
 	</array>
 </dict>
