@@ -17,27 +17,45 @@ struct AppManagedObjectContexts {
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-  var window: UIWindow?
+  var window: UIWindow!
+  
+  lazy var coreDataStore: CoreDataStore = {
+    let coreDataStore = CoreDataStore()
+    return coreDataStore
+    }()
+  
+  lazy var coreDataHelper: CoreDataHelper = {
+    let coreDataHelper = CoreDataHelper(store: self.coreDataStore)
+    return coreDataHelper
+    }()
+  
+  lazy var appContexts: AppManagedObjectContexts = {
+    let appContexts = AppManagedObjectContexts(mainContext: self.coreDataHelper.mainManagedObjectContext!, backgroundContext: self.coreDataHelper.backgroundManagedObjectContext!)
+    return appContexts
+    }()
 
   func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-    // Override point for customization after application launch.
     let mainStoryBoard = UIStoryboard(name: "Main", bundle: nil)
     window = UIWindow(frame: UIScreen.mainScreen().bounds)
-    window!.backgroundColor = UIColor.whiteColor()
+    window.backgroundColor = UIColor.whiteColor()
     
-    var rootViewController:UIViewController
-    if let token = NSUserDefaults.standardUserDefaults().stringForKey("token") {
-      let navigationController :UINavigationController = mainStoryBoard.instantiateViewControllerWithIdentifier("MainNavigation") as UINavigationController
+    var rootViewController: UIViewController
+    let tokenManager = APITokenManager(appContexts: appContexts)
+    if tokenManager.isSignedIn() {
+      let navigationController = mainStoryBoard.instantiateViewControllerWithIdentifier("MainNavigation") as UINavigationController
       let listViewController = navigationController.viewControllers[0] as ChecklistsViewController
-      listViewController.appContexts = self.appContexts
+      listViewController.appContexts = appContexts
+      listViewController.tokenManager = tokenManager
       rootViewController = navigationController
     } else {
       let signInViewController = mainStoryBoard.instantiateViewControllerWithIdentifier("SignInViewController") as SignInViewController
       signInViewController.appContexts = appContexts
+      signInViewController.tokenManager = tokenManager
       rootViewController = signInViewController
     }
-    window!.rootViewController = rootViewController
-    window!.makeKeyAndVisible()
+
+    window.rootViewController = rootViewController
+    window.makeKeyAndVisible()
     return true
   }
 
@@ -65,19 +83,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // Saves changes in the application's managed object context before the application terminates.
     coreDataHelper.saveContext()
   }
-
-  lazy var coreDataStore: CoreDataStore = {
-  let coreDataStore = CoreDataStore()
-  return coreDataStore
-  }()
-  
-  lazy var coreDataHelper: CoreDataHelper = {
-    let coreDataHelper = CoreDataHelper()
-    return coreDataHelper
-  }()
-
-  lazy var appContexts: AppManagedObjectContexts = {
-    let appContexts = AppManagedObjectContexts(mainContext: self.coreDataHelper.mainManagedObjectContext!, backgroundContext: self.coreDataHelper.backgroundManagedObjectContext!)
-    return appContexts
-  }()
 }

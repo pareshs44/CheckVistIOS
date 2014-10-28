@@ -21,9 +21,8 @@ class List: NSManagedObject {
 
   class func listWith(#ID:String, managedObjectContext:NSManagedObjectContext) -> List {
     let predicate = NSPredicate(format: "id == %@", ID)
-    let fetchRequest = NSFetchRequest(entityName: "List")
+    let fetchRequest = NSFetchRequest(entityName: NSStringFromClass(self))
     fetchRequest.predicate = predicate
-    fetchRequest.returnsObjectsAsFaults = false
     
     var error: NSError? = nil
     var list: List
@@ -41,9 +40,9 @@ class List: NSManagedObject {
     return list
   }
   
-  class func insertOrUpdate(list:AnyObject, managedObjectContext:NSManagedObjectContext) {
+  class func insertOrUpdate(list:NSDictionary, managedObjectContext:NSManagedObjectContext) {
     let listID = (list["id"] as NSNumber).stringValue
-    var listIem = List.listWith(ID: listID, managedObjectContext:managedObjectContext) as List
+    var listIem = List.listWith(ID: listID, managedObjectContext:managedObjectContext)
     listIem.name = list["name"]! as String
     listIem.tasksCompleted = list["task_completed"]! as NSNumber
     listIem.totalTasks = list["task_count"]! as NSNumber

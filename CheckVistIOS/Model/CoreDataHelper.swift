@@ -11,11 +11,10 @@ import CoreData
 
 class CoreDataHelper: NSObject {
  
-  let store: CoreDataStore!
-  override init() {
+  let store: CoreDataStore
+  init(store: CoreDataStore) {
+    self.store = store
     super.init()
-    let appDelegate = UIApplication.sharedApplication().delegate as AppDelegate
-    store = appDelegate.coreDataStore
     NSNotificationCenter.defaultCenter().addObserver(self, selector: "contextDidSaveContext:", name: NSManagedObjectContextDidSaveNotification, object: nil)
   }
   
@@ -56,30 +55,14 @@ class CoreDataHelper: NSObject {
   }
 
   func saveContext() {
-    self.saveContext(self.backgroundManagedObjectContext!)
+    self.saveContext(backgroundManagedObjectContext!)
   }
   
   // call back function by save context
   func contextDidSaveContext(notification: NSNotification) {
-    let sender = notification.object as NSManagedObjectContext
-    if sender === self.mainManagedObjectContext {
-      NSLog("******** Saved main Context in this thread")
-      self.backgroundManagedObjectContext!.performBlock {
-        self.backgroundManagedObjectContext!.mergeChangesFromContextDidSaveNotification(notification)
-      }
-    } else if sender === self.backgroundManagedObjectContext {
-      NSLog("******** Saved background Context in this thread")
-      self.mainManagedObjectContext!.performBlock {
-        self.mainManagedObjectContext!.mergeChangesFromContextDidSaveNotification(notification)
-      }
-    } else {
-      NSLog("******** Saved Context in other thread")
-      self.backgroundManagedObjectContext!.performBlock {
-        self.backgroundManagedObjectContext!.mergeChangesFromContextDidSaveNotification(notification)
-      }
-      self.mainManagedObjectContext!.performBlock {
-        self.mainManagedObjectContext!.mergeChangesFromContextDidSaveNotification(notification)
-      }
+    NSLog("** Saved background Context in its thread")
+    mainManagedObjectContext!.performBlock {
+      self.mainManagedObjectContext!.mergeChangesFromContextDidSaveNotification(notification)
     }
   }
 }

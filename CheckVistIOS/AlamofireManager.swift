@@ -10,15 +10,17 @@ import Foundation
 import Alamofire
 import CoreData
 
-class AlamofireManager: NSObject {
-  let tokenExpiryInSeconds = 86400.0
+class AlamofireManager {
   let baseURL = "http://checkvist.com/"
-  let userDefaults = NSUserDefaults.standardUserDefaults()
+  let tokenManager: APITokenManager
+  
+  init(tokenManager: APITokenManager) {
+    self.tokenManager = tokenManager
+  }
   
   func getToken(completion:(token:String) -> Void) {
-    let expiryDate = userDefaults.objectForKey("tokenExpiry") as NSDate
-    if expiryDate.timeIntervalSinceNow > 0 {
-      let token = userDefaults.stringForKey("token")!
+    if tokenManager.isTokenValid() {
+      let token = tokenManager.getAPIToken()
       completion(token: token)
     } else {
       refreshToken(completion)
@@ -27,7 +29,7 @@ class AlamofireManager: NSObject {
   
   func refreshToken(completion:(token: String) -> Void) {
     let refreshTokenPath = "auth/refresh_token.json"
-    let params = ["old_token": userDefaults.stringForKey("token")!]
+    let params = ["old_token": tokenManager.getAPIToken()]
     let request = Alamofire.request(.GET, urlFor(refreshTokenPath), parameters: params)
     request.responseJSON {
       (_, _, response, error) in
@@ -35,15 +37,14 @@ class AlamofireManager: NSObject {
         NSLog("Got error while refreshing token: %@", refreshTokenError)
       }
       if let token = response as? String {
-        self.userDefaults.setObject(token, forKey: "token")
-        self.userDefaults.setObject(NSDate(timeIntervalSinceNow: self.tokenExpiryInSeconds), forKey: "tokenExpiry")
+        self.tokenManager.setAPITokenWith(tokenKey: token)
         completion(token: token)
       }
     }
   }
   
   func urlFor(path: String) -> URLStringConvertible {
-    return NSURL(string: path, relativeToURL: NSURL(string: baseURL)).absoluteString!
+    return NSURL(string: path, relativeToURL: NSURL(string: baseURL))!.absoluteString!
   }
   
   func signInWithEmailId(emailId: String, password remoteKey: String, completion:()-> Void) {
@@ -56,8 +57,7 @@ class AlamofireManager: NSObject {
         NSLog("Got sign in error: %@", signInError)
       }
       if let token = response as? String {
-        self.userDefaults.setObject(token, forKey: "token")
-        self.userDefaults.setObject(NSDate(timeIntervalSinceNow: self.tokenExpiryInSeconds), forKey: "tokenExpiry")
+        self.tokenManager.setAPITokenWith(tokenKey: token)
         completion()
       }
     }
@@ -87,9 +87,26 @@ class AlamofireManager: NSObject {
       let request = Alamofire.request(.GET, self.urlFor(tasksPath), parameters: params)
       request.responseJSON {
         (_, _, response, error) in
-        if let listsError = error {
-          NSLog("Got error while fetching tasks: %@", listsError)
+        if let tasksError = error {
+          NSLog("Got error while fetching tasks: %@", tasksError)
         }
+        completion(response: response)
+      }
+    }
+  }
+  
+  func closeTaskWith(#listID: String, taskID : String, completion:(response : AnyObject?) -> Void) {
+    let closeTaskPath = "checklists/"+listID+"/tasks/"+taskID+"/close.json"
+    getToken() {
+      (token) in
+      let params = ["token": token] as Dictionary<String, AnyObject>
+      let request = Alamofire.request(.POST, self.urlFor(closeTaskPath), parameters: params, encoding: .JSON)
+      request.responseJSON {
+        (_, _, response, error) in
+        if let tasksError = error {
+          NSLog("Got error while closing task: %@", tasksError)
+        }
+        println(response)
         completion(response: response)
       }
     }
