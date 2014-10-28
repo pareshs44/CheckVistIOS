@@ -24,9 +24,10 @@
 		A33EABA819EE884400CB6B5C /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33EABA119EE884400CB6B5C /* CoreDataManager.swift */; };
 		A33EABA919EE884400CB6B5C /* CoreDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33EABA219EE884400CB6B5C /* CoreDataStore.swift */; };
 		A33EABAA19EE884400CB6B5C /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33EABA319EE884400CB6B5C /* List.swift */; };
-		A33EABAB19EE884400CB6B5C /* NFRCTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33EABA419EE884400CB6B5C /* NFRCTableViewController.swift */; };
 		A33EABAC19EE884400CB6B5C /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33EABA519EE884400CB6B5C /* Task.swift */; };
 		A3D0E01D19E8E745004A4BA1 /* AlamofireManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D0E01C19E8E745004A4BA1 /* AlamofireManager.swift */; };
+		A3E528B919F640440054518B /* APITokenManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E528B819F640440054518B /* APITokenManager.swift */; };
+		A3E528BB19F64B7B0054518B /* APIToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E528BA19F64B7B0054518B /* APIToken.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,9 +96,10 @@
 		A33EABA119EE884400CB6B5C /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoreDataManager.swift; path = Model/CoreDataManager.swift; sourceTree = "<group>"; };
 		A33EABA219EE884400CB6B5C /* CoreDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoreDataStore.swift; path = Model/CoreDataStore.swift; sourceTree = "<group>"; };
 		A33EABA319EE884400CB6B5C /* List.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = List.swift; path = Model/List.swift; sourceTree = "<group>"; };
-		A33EABA419EE884400CB6B5C /* NFRCTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NFRCTableViewController.swift; path = Model/NFRCTableViewController.swift; sourceTree = "<group>"; };
 		A33EABA519EE884400CB6B5C /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Task.swift; path = Model/Task.swift; sourceTree = "<group>"; };
 		A3D0E01C19E8E745004A4BA1 /* AlamofireManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireManager.swift; sourceTree = "<group>"; };
+		A3E528B819F640440054518B /* APITokenManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APITokenManager.swift; sourceTree = "<group>"; };
+		A3E528BA19F64B7B0054518B /* APIToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = APIToken.swift; path = Model/APIToken.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +145,7 @@
 			children = (
 				A3292DDD19D2C28000B1D4C8 /* AppDelegate.swift */,
 				A3D0E01C19E8E745004A4BA1 /* AlamofireManager.swift */,
+				A3E528B819F640440054518B /* APITokenManager.swift */,
 				A3AE4B9619ED7E9F008830B2 /* UI */,
 				A3AE4B9719ED7ECD008830B2 /* Model */,
 				A3292DDB19D2C28000B1D4C8 /* Supporting Files */,
@@ -203,11 +206,11 @@
 			isa = PBXGroup;
 			children = (
 				A33EAB9E19EE884400CB6B5C /* CheckVistIOS.xcdatamodeld */,
+				A3E528BA19F64B7B0054518B /* APIToken.swift */,
 				A33EABA019EE884400CB6B5C /* CoreDataHelper.swift */,
 				A33EABA119EE884400CB6B5C /* CoreDataManager.swift */,
 				A33EABA219EE884400CB6B5C /* CoreDataStore.swift */,
 				A33EABA319EE884400CB6B5C /* List.swift */,
-				A33EABA419EE884400CB6B5C /* NFRCTableViewController.swift */,
 				A33EABA519EE884400CB6B5C /* Task.swift */,
 			);
 			name = Model;
@@ -338,9 +341,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A33EABAB19EE884400CB6B5C /* NFRCTableViewController.swift in Sources */,
+				A3E528B919F640440054518B /* APITokenManager.swift in Sources */,
 				A33EABA619EE884400CB6B5C /* CheckVistIOS.xcdatamodeld in Sources */,
 				A3D0E01D19E8E745004A4BA1 /* AlamofireManager.swift in Sources */,
+				A3E528BB19F64B7B0054518B /* APIToken.swift in Sources */,
 				A33EAB9A19EE883300CB6B5C /* ListsTableViewCell.swift in Sources */,
 				A33EABA919EE884400CB6B5C /* CoreDataStore.swift in Sources */,
 				A33EAB9C19EE883300CB6B5C /* SignInViewController.swift in Sources */,

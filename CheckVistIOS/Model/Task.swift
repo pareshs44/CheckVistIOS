@@ -11,22 +11,22 @@ import CoreData
 
 @objc(Task)
 class Task: NSManagedObject {
-
-    @NSManaged var dueDate: String
-    @NSManaged var id: String
-    @NSManaged var lastUpdated: String
-    @NSManaged var name: String
-    @NSManaged var position: NSNumber
-    @NSManaged var status: NSNumber
-    @NSManaged var parentTaskID: String
-    @NSManaged var isTaskDeleted: NSNumber
-    @NSManaged var list: List
+  
+  @NSManaged var id: String
+  @NSManaged var name: String
+  @NSManaged var textColor: String?
+  @NSManaged var backgroundColor: String?
+  @NSManaged var dueDate: String?
+  @NSManaged var lastUpdated: NSDate
+  @NSManaged var position: NSNumber
+  @NSManaged var status: NSNumber
+  @NSManaged var parentTaskID: String
+  @NSManaged var list: List
 
   class func taskWith(#ID:String, managedObjectContext:NSManagedObjectContext) -> Task {
     let predicate = NSPredicate(format: "id == %@", ID)
-    let fetchRequest = NSFetchRequest(entityName: "Task")
+    let fetchRequest = NSFetchRequest(entityName: NSStringFromClass(self))
     fetchRequest.predicate = predicate
-    fetchRequest.returnsObjectsAsFaults = false
     
     var error: NSError? = nil
     var task: Task
@@ -44,16 +44,24 @@ class Task: NSManagedObject {
     return task
   }
   
-  class func insertOrUpdate(task: AnyObject, managedObjectContext: NSManagedObjectContext) {
+  class func insertOrUpdate(task: NSDictionary, managedObjectContext: NSManagedObjectContext) {
+    println("PIKACHU: %@", task)
+
     let taskID = (task["id"] as NSNumber).stringValue
     let listID = (task["checklist_id"] as NSNumber).stringValue
     var taskItem = Task.taskWith(ID: taskID, managedObjectContext:managedObjectContext) as Task
     taskItem.list = List.listWith(ID: listID, managedObjectContext: managedObjectContext) as List
     taskItem.name = task["content"]! as String
-    if let taskDeleted = task["deleted"] as? Bool {
-      taskItem.isTaskDeleted = taskDeleted
+    
+    let color = task["color"] as? [String:String]
+    if color != nil {
+      taskItem.backgroundColor = color!["background"]
+      taskItem.textColor = color!["text"]
     }
-    taskItem.lastUpdated = task["updated_at"]! as String
+    
+    let dateFormatter = NSDateFormatter()
+    dateFormatter.dateFormat = "yyyy/MM/dd HH:mm:ss Z"
+    taskItem.lastUpdated = dateFormatter.dateFromString(task["updated_at"]! as String)!
     taskItem.status = task["status"]! as NSNumber
     if let dueDate = task["due"] as? String {
       taskItem.dueDate = dueDate

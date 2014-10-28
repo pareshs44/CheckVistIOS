@@ -11,9 +11,10 @@ import CoreData
 
 class CoreDataManager: NSObject {
   var appContexts : AppManagedObjectContexts!
-  let alamofireManager = AlamofireManager()
-  init(appContexts : AppManagedObjectContexts) {
+  var alamofireManager : AlamofireManager!
+  init(appContexts : AppManagedObjectContexts, tokenManager: APITokenManager) {
     self.appContexts = appContexts
+    self.alamofireManager = AlamofireManager(tokenManager: tokenManager)
     super.init()
   }
   
@@ -25,9 +26,10 @@ class CoreDataManager: NSObject {
       let lists = response as? NSArray
       if lists != nil {
         for list in lists! {
+          let listDictionary = list as NSDictionary
           let bgContext = self.appContexts.backgroundContext
           bgContext.performBlock() {
-            List.insertOrUpdate(list, managedObjectContext:bgContext)
+            List.insertOrUpdate(listDictionary, managedObjectContext:bgContext)
             bgContext.save(nil)
           }
         }
@@ -43,9 +45,29 @@ class CoreDataManager: NSObject {
       let tasks = response as? NSArray
       if tasks != nil {
         for task in tasks! {
+          let taskDictionary = task as NSDictionary
           let bgContext = self.appContexts.backgroundContext
           bgContext.performBlock() {
-            Task.insertOrUpdate(task, managedObjectContext: bgContext)
+            Task.insertOrUpdate(taskDictionary, managedObjectContext: bgContext)
+            bgContext.save(nil)
+          }
+        }
+      }
+    }
+  }
+  
+  func closeTaskItemWith(#listID: String, taskID: String) {
+    UIApplication.sharedApplication().networkActivityIndicatorVisible = true
+    alamofireManager.closeTaskWith(listID: listID, taskID: taskID) {
+      (response) in
+      UIApplication.sharedApplication().networkActivityIndicatorVisible = false
+      let tasks = response as? NSArray
+      if tasks != nil {
+        for task in tasks! {
+          let taskDictionary = task as NSDictionary
+          let bgContext = self.appContexts.backgroundContext
+          bgContext.performBlock() {
+            Task.insertOrUpdate(taskDictionary, managedObjectContext: bgContext)
             bgContext.save(nil)
           }
         }

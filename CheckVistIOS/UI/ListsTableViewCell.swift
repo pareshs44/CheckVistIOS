@@ -12,7 +12,6 @@ class ListsTableViewCell: UITableViewCell {
 
   @IBOutlet weak var titleLabel: UILabel!
   @IBOutlet weak var progressBar: UIProgressView!
-  @IBOutlet weak var remainingTasks: UILabel!
   
   override func awakeFromNib() {
     super.awakeFromNib()
